@@ -144,3 +144,58 @@ footer {
   color: var(--ink-soft);
   font-size: 14.5px;
 }
+
+/* ---- Download cards -------------------------------------------------------
+   One card per platform. The button is the only filled element on the page, so
+   the thing a visitor came to do is the thing that stands out. */
+.get {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.get .card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.get .card h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.get .card p {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.dl {
+  display: inline-block;
+  background: var(--violet);
+  color: var(--paper);
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: 650;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.dl:hover { filter: brightness(1.08); text-decoration: none; }
+
+.dl.ghost {
+  background: transparent;
+  color: var(--violet);
+  border: 1px solid var(--line);
+}
+
+.meta {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}

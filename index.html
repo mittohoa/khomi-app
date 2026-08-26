@@ -25,10 +25,35 @@
 tự đọc tiêu đề và xếp nhãn, rồi đưa lại cho bạn khi cần. Kho nằm
 <b>trên máy bạn</b>; đồng bộ đám mây là tuỳ chọn.</p>
 
-<h2>Mở kho trên máy tính</h2>
-<p><a href="app/"><b>Khomi trên web</b></a> — đăng nhập bằng tài khoản Khomi để
-đọc lại kho đã đồng bộ, tìm kiếm và mở lại thứ đã lưu. Chỉ đọc: thêm và sửa vẫn
-làm trên điện thoại.</p>
+<h2>Dùng Khomi ở đâu</h2>
+
+<div class="get">
+  <div class="card">
+    <h3>Windows 10/11</h3>
+    <p>Bản đầy đủ, kho nằm trên máy bạn. Nhấn <b>Ctrl+Shift+K</b> từ bất kỳ đâu
+    để ghi nhanh, hoặc kéo–thả link, ảnh, tệp vào cửa sổ.</p>
+    <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1-windows/Khomi-1.1.1-windows-x64.zip">Tải cho Windows</a>
+    <span class="meta">.zip · 17 MB · phiên bản 1.1.1 · chỉ 64-bit</span>
+  </div>
+  <div class="card">
+    <h3>Trình duyệt</h3>
+    <p>Đăng nhập để đọc lại kho đã đồng bộ, tìm kiếm và mở lại thứ đã lưu.
+    Chỉ đọc — thêm và sửa vẫn làm trên điện thoại.</p>
+    <a class="dl ghost" href="app/">Mở Khomi trên web</a>
+    <span class="meta">Không cần cài gì</span>
+  </div>
+</div>
+
+<div class="note warn">
+  <p><b>Bản Windows chưa ký số.</b> Lần chạy đầu Windows SmartScreen sẽ chặn —
+  bấm <b>More info</b> rồi <b>Run anyway</b>. Giải nén nguyên thư mục và chạy
+  <code>khomi.exe</code> từ trong đó; tách riêng tệp <code>.exe</code> ra là
+  không chạy được.</p>
+  <p>Nếu báo thiếu <code>vcruntime140.dll</code>, cài
+  <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++
+  Redistributable (x64)</a>. Đọc chữ trong ảnh, quét QR và khoá vân tay không có
+  trên Windows — những thứ đó dùng thư viện chỉ chạy trên điện thoại.</p>
+</div>
 
 <h2>Trang bắt buộc</h2>
 <ul>
@@ -46,9 +71,34 @@ làm trên điện thoại.</p>
   <p class="soft">Khomi keeps the links, messages, images, files and notes you
   share into it, reads their titles, sorts them, and hands them back when you
   need them. The vault lives <b>on your device</b>; cloud sync is optional.</p>
-  <p><a href="app/"><b>Khomi on the web</b></a> — sign in to read your synced
-  vault, search it and reopen what you saved. Read-only; adding and editing
-  stay on the phone.</p>
+  <div class="get">
+    <div class="card">
+      <h3>Windows 10/11</h3>
+      <p>The full app, with the vault on your own machine. Press
+      <b>Ctrl+Shift+K</b> from anywhere to capture, or drag a link, image or
+      file onto the window.</p>
+      <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1-windows/Khomi-1.1.1-windows-x64.zip">Download for Windows</a>
+      <span class="meta">.zip · 17 MB · version 1.1.1 · 64-bit only</span>
+    </div>
+    <div class="card">
+      <h3>Browser</h3>
+      <p>Sign in to read your synced vault, search it and reopen what you
+      saved. Read-only; adding and editing stay on the phone.</p>
+      <a class="dl ghost" href="app/">Open Khomi on the web</a>
+      <span class="meta">Nothing to install</span>
+    </div>
+  </div>
+
+  <div class="note warn">
+    <p><b>The Windows build is not code-signed.</b> SmartScreen will block the
+    first run — choose <b>More info</b>, then <b>Run anyway</b>. Unzip the whole
+    folder and start <code>khomi.exe</code> from inside it; the executable on
+    its own will not run.</p>
+    <p>If Windows reports a missing <code>vcruntime140.dll</code>, install the
+    <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual
+    C++ Redistributable (x64)</a>. OCR, QR scanning and biometric lock are
+    absent on Windows: those libraries are mobile-only.</p>
+  </div>
   <ul>
     <li><a href="privacy.html">Privacy policy</a></li>
     <li><a href="delete-account.html">Delete your account</a></li>
