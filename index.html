@@ -28,13 +28,33 @@ tự đọc tiêu đề và xếp nhãn, rồi đưa lại cho bạn khi cần. 
 <h2>Dùng Khomi ở đâu</h2>
 
 <div class="get">
+  <div class="card soon">
+    <h3>Google Play</h3>
+    <p>Bản Android chính thức, tự cập nhật qua Play. Đang chờ Google duyệt.</p>
+    <!-- Khi Play duyệt xong, thay khối dưới bằng:
+         <a class="dl" href="https://play.google.com/store/apps/details?id=com.mittohoa.khomi">Tải trên Google Play</a>
+         và bỏ class "soon" ở thẻ card. -->
+    <span class="dl off">Sắp có</span>
+    <span class="meta">com.mittohoa.khomi</span>
+  </div>
+
+  <div class="card">
+    <h3>Android — tệp APK</h3>
+    <p>Không chờ Play. Cài trực tiếp, đủ tính năng: chia sẻ vào Khomi, đọc chữ
+    trong ảnh, quét QR, khoá vân tay.</p>
+    <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-android-arm64.apk">Tải APK (43&nbsp;MB)</a>
+    <span class="meta">phiên bản 1.1.1 · Android 6.0 trở lên · arm64</span>
+    <a class="alt" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-android-universal.apk">Máy đời cũ hoặc không rõ chip → bản dùng chung (129&nbsp;MB)</a>
+  </div>
+
   <div class="card">
     <h3>Windows 10/11</h3>
     <p>Bản đầy đủ, kho nằm trên máy bạn. Nhấn <b>Ctrl+Shift+K</b> từ bất kỳ đâu
     để ghi nhanh, hoặc kéo–thả link, ảnh, tệp vào cửa sổ.</p>
-    <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1-windows/Khomi-1.1.1-windows-x64.zip">Tải cho Windows</a>
-    <span class="meta">.zip · 17 MB · phiên bản 1.1.1 · chỉ 64-bit</span>
+    <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-windows-x64.zip">Tải cho Windows (17&nbsp;MB)</a>
+    <span class="meta">.zip · phiên bản 1.1.1 · chỉ 64-bit</span>
   </div>
+
   <div class="card">
     <h3>Trình duyệt</h3>
     <p>Đăng nhập để đọc lại kho đã đồng bộ, tìm kiếm và mở lại thứ đã lưu.
@@ -45,11 +65,15 @@ tự đọc tiêu đề và xếp nhãn, rồi đưa lại cho bạn khi cần. 
 </div>
 
 <div class="note warn">
-  <p><b>Bản Windows chưa ký số.</b> Lần chạy đầu Windows SmartScreen sẽ chặn —
-  bấm <b>More info</b> rồi <b>Run anyway</b>. Giải nén nguyên thư mục và chạy
+  <p><b>Cài APK rồi thì đừng cài lại từ Play.</b> Tệp APK ở đây ký bằng khoá
+  riêng của nhà phát triển, còn bản trên Play do Google ký — hai chữ ký khác
+  nhau nên Android không cho cập nhật chéo. Muốn chuyển sang bản Play thì phải
+  gỡ bản APK trước, và <b>sao lưu kho trước khi gỡ</b>: mở app →
+  <b>Cài đặt → Sao lưu → Sao lưu ra tệp</b>.</p>
+  <p><b>Bản Windows chưa ký số.</b> Lần chạy đầu SmartScreen sẽ chặn — bấm
+  <b>More info</b> rồi <b>Run anyway</b>. Giải nén nguyên thư mục và chạy
   <code>khomi.exe</code> từ trong đó; tách riêng tệp <code>.exe</code> ra là
-  không chạy được.</p>
-  <p>Nếu báo thiếu <code>vcruntime140.dll</code>, cài
+  không chạy được. Nếu báo thiếu <code>vcruntime140.dll</code>, cài
   <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++
   Redistributable (x64)</a>. Đọc chữ trong ảnh, quét QR và khoá vân tay không có
   trên Windows — những thứ đó dùng thư viện chỉ chạy trên điện thoại.</p>
@@ -72,14 +96,31 @@ tự đọc tiêu đề và xếp nhãn, rồi đưa lại cho bạn khi cần. 
   share into it, reads their titles, sorts them, and hands them back when you
   need them. The vault lives <b>on your device</b>; cloud sync is optional.</p>
   <div class="get">
+    <div class="card soon">
+      <h3>Google Play</h3>
+      <p>The official Android build, updating through Play. Awaiting review.</p>
+      <span class="dl off">Coming soon</span>
+      <span class="meta">com.mittohoa.khomi</span>
+    </div>
+
+    <div class="card">
+      <h3>Android — APK file</h3>
+      <p>No waiting for Play. Everything works: sharing into Khomi, reading
+      text in images, QR scanning, biometric lock.</p>
+      <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-android-arm64.apk">Download APK (43&nbsp;MB)</a>
+      <span class="meta">version 1.1.1 · Android 6.0+ · arm64</span>
+      <a class="alt" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-android-universal.apk">Older phone, or unsure? Universal build (129&nbsp;MB)</a>
+    </div>
+
     <div class="card">
       <h3>Windows 10/11</h3>
       <p>The full app, with the vault on your own machine. Press
       <b>Ctrl+Shift+K</b> from anywhere to capture, or drag a link, image or
       file onto the window.</p>
-      <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1-windows/Khomi-1.1.1-windows-x64.zip">Download for Windows</a>
-      <span class="meta">.zip · 17 MB · version 1.1.1 · 64-bit only</span>
+      <a class="dl" href="https://github.com/mittohoa/khomi-app/releases/download/v1.1.1/Khomi-1.1.1-windows-x64.zip">Download for Windows (17&nbsp;MB)</a>
+      <span class="meta">.zip · version 1.1.1 · 64-bit only</span>
     </div>
+
     <div class="card">
       <h3>Browser</h3>
       <p>Sign in to read your synced vault, search it and reopen what you
@@ -90,15 +131,21 @@ tự đọc tiêu đề và xếp nhãn, rồi đưa lại cho bạn khi cần. 
   </div>
 
   <div class="note warn">
+    <p><b>Do not install the Play build over the APK.</b> This APK is signed
+    with the developer's own key and the Play build is signed by Google, so
+    Android will not update one from the other. To switch, uninstall first —
+    and export a backup before you do: <b>Settings → Backup → Back up to a
+    file</b>.</p>
     <p><b>The Windows build is not code-signed.</b> SmartScreen will block the
     first run — choose <b>More info</b>, then <b>Run anyway</b>. Unzip the whole
     folder and start <code>khomi.exe</code> from inside it; the executable on
-    its own will not run.</p>
-    <p>If Windows reports a missing <code>vcruntime140.dll</code>, install the
+    its own will not run. If Windows reports a missing
+    <code>vcruntime140.dll</code>, install the
     <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual
     C++ Redistributable (x64)</a>. OCR, QR scanning and biometric lock are
     absent on Windows: those libraries are mobile-only.</p>
   </div>
+
   <ul>
     <li><a href="privacy.html">Privacy policy</a></li>
     <li><a href="delete-account.html">Delete your account</a></li>

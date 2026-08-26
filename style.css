@@ -199,3 +199,21 @@ footer {
   color: var(--ink-soft);
   font-size: 13px;
 }
+
+/* A card for a channel that is not open yet. Greyed rather than hidden: people
+   ask "is this on Play?", and the honest answer is a visible "not yet". */
+.card.soon { border-style: dashed; }
+.card.soon h3 { color: var(--ink-soft); }
+
+.dl.off {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1px dashed var(--line);
+  cursor: default;
+}
+
+.alt {
+  display: block;
+  margin-top: 10px;
+  font-size: 13.5px;
+}
