@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách riêng tư — Khomi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="9.4" stroke-linecap="round">
+      <path d="M27.8 24.9 V76.7"/><path d="M33.7 50 L59.2 28.9"/><path d="M33.7 50 L59.2 72.7"/>
+    </g>
+    <rect x="67.2" y="32.2" width="6.4" height="37.1" rx="3.2" fill="#FBBF24"/>
+  </svg>
+  <b>Khomi</b>
+  <span class="spacer"></span>
+  <a href="./">Trang chủ</a>
+</header>
+
+<h1>Chính sách riêng tư</h1>
+<p class="updated">Áp dụng cho ứng dụng Khomi (<code>com.mittohoa.khomi</code>) ·
+Cập nhật 26/8/2026</p>
+
+<div class="note">
+  <p><b>Tóm tắt trong ba câu.</b> Khomi lưu mọi thứ <b>trên máy bạn</b>; đồng bộ
+  đám mây là tuỳ chọn và <b>mặc định tắt</b>. Khi bạn bật đồng bộ, kho của bạn
+  nằm trên máy chủ Supabase của nhà phát triển và <b>chỉ tài khoản của bạn đọc
+  được</b>. Tính năng AI chỉ chạy khi bạn tự nối khoá của mình, và lúc đó nội
+  dung mục được gửi tới nhà cung cấp AI bạn chọn.</p>
+</div>
+
+<h2>1. Ai vận hành ứng dụng này</h2>
+<p>Khomi do <b>mittohoa</b> phát triển và vận hành.
+Liên hệ: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a></p>
+
+<h2>2. Dữ liệu được xử lý, và ở đâu</h2>
+
+<h3>2.1 Chỉ nằm trên máy bạn (mặc định)</h3>
+<p>Khi bạn chưa đăng nhập, <b>không có dữ liệu nào rời khỏi thiết bị</b> ngoài
+những kết nối mô tả ở mục 3. Kho được lưu trong cơ sở dữ liệu riêng của ứng dụng
+trên máy:</p>
+<ul>
+  <li>Mục đã lưu: liên kết, tin nhắn, ghi chú, ảnh, tệp bạn chia sẻ vào app.</li>
+  <li>Thông tin app tự tạo cho mỗi mục: tiêu đề, ảnh bìa, nhãn, chuyên mục,
+  tóm tắt, vector ngữ nghĩa.</li>
+  <li>Cài đặt của bạn và khoá AI (nếu có).</li>
+</ul>
+
+<h3>2.2 Khi bạn bật đồng bộ (tuỳ chọn)</h3>
+<p>Đồng bộ yêu cầu tạo tài khoản bằng email và mật khẩu. Lúc đó những thứ sau
+được gửi lên máy chủ Supabase do nhà phát triển vận hành:</p>
+<table>
+  <tr><th>Dữ liệu</th><th>Vì sao</th></tr>
+  <tr><td>Địa chỉ email</td><td>Để đăng nhập và nhận diện tài khoản</td></tr>
+  <tr><td>Nội dung mục đã lưu, kèm tiêu đề, ghi chú, nhãn, chuyên mục, tóm tắt,
+    vector ngữ nghĩa</td><td>Để kho giống nhau trên nhiều thiết bị</td></tr>
+  <tr><td>Mốc thời gian tạo/sửa mỗi mục</td><td>Để biết bản nào mới hơn khi hai
+    thiết bị cùng sửa</td></tr>
+</table>
+<p><b>Ảnh và tệp đính kèm không được tải lên</b> — chúng chỉ nằm trên thiết bị
+đã lưu chúng.</p>
+<p>Máy chủ dùng chung cho mọi người dùng Khomi, nhưng mỗi tài khoản được cách ly
+bằng chính sách Row Level Security của cơ sở dữ liệu: một tài khoản chỉ đọc và
+ghi được các dòng mang mã người dùng của chính nó. Nhà phát triển, với tư cách
+người quản trị dự án, về mặt kỹ thuật có thể truy cập cơ sở dữ liệu.</p>
+
+<h2>3. Kết nối ra bên ngoài</h2>
+<table>
+  <tr><th>Đi tới đâu</th><th>Khi nào</th><th>Gửi gì</th></tr>
+  <tr>
+    <td>Trang web bạn đã lưu</td>
+    <td>Ngay sau khi bạn lưu một liên kết</td>
+    <td>Một lượt truy cập bình thường để lấy tiêu đề và ảnh bìa. Nếu bạn đã đăng
+    nhập trang đó ngay trong app, phiên đăng nhập được dùng để đọc nội dung —
+    chỉ gửi cho đúng trang đó, không gửi cho bất kỳ nơi nào khác.</td>
+  </tr>
+  <tr>
+    <td>Nhà cung cấp AI bạn chọn<br>(Google AI Studio, Groq, OpenAI,
+      OpenRouter, Mistral, Anthropic)</td>
+    <td>Chỉ khi bạn tự thêm khoá API</td>
+    <td>Nội dung mục cần tóm tắt hoặc phân loại, và câu hỏi ở màn Hỏi AI. Khoá
+    là của bạn, chỉ nằm trên máy bạn; dữ liệu của bạn chịu chính sách riêng tư
+    của nhà cung cấp đó.</td>
+  </tr>
+  <tr>
+    <td>Supabase</td>
+    <td>Chỉ khi bạn đăng nhập</td>
+    <td>Như mục 2.2</td>
+  </tr>
+</table>
+
+<div class="note">
+  <p><b>Khomi không có quảng cáo, không có công cụ phân tích, không theo dõi
+  hành vi.</b> Không có SDK bên thứ ba nào thu thập dữ liệu của bạn. Ứng dụng
+  không thu thập vị trí, danh bạ, hay danh sách ứng dụng đã cài.</p>
+</div>
+
+<h2>4. Xử lý trên máy, không gửi đi đâu</h2>
+<ul>
+  <li><b>Đọc chữ trong ảnh (OCR)</b> chạy hoàn toàn trên thiết bị.</li>
+  <li><b>Quét mã QR/vạch</b> chạy hoàn toàn trên thiết bị.</li>
+  <li><b>Nhập bằng giọng nói</b> dùng bộ nhận dạng giọng nói của hệ điều hành và
+  chịu chính sách riêng tư của nhà sản xuất thiết bị.</li>
+</ul>
+
+<h2>5. Quyền ứng dụng xin, và để làm gì</h2>
+<table>
+  <tr><th>Quyền</th><th>Dùng vào việc</th></tr>
+  <tr><td>Máy ảnh</td><td>Quét mã QR</td></tr>
+  <tr><td>Micrô</td><td>Nhập bằng giọng nói khi bạn bấm nút micrô</td></tr>
+  <tr><td>Ảnh</td><td>Lưu ảnh vào thư viện, và đọc ảnh bạn chọn để nhận chữ</td></tr>
+  <tr><td>Thông báo</td><td>Nhắc nhở và tóm tắt bạn tự bật</td></tr>
+  <tr><td>Vân tay / sinh trắc</td><td>Khoá ứng dụng, nếu bạn bật</td></tr>
+  <tr><td>Khởi động cùng máy</td><td>Đặt lại lịch nhắc sau khi khởi động lại</td></tr>
+  <tr><td>Internet</td><td>Các kết nối ở mục 3</td></tr>
+</table>
+
+<h2>6. Dữ liệu được giữ bao lâu</h2>
+<ul>
+  <li><b>Mục trong thùng rác</b> tự xoá vĩnh viễn sau <b>30 ngày</b>, cả trên máy
+  lẫn trên máy chủ.</li>
+  <li><b>Mục khác</b> được giữ đến khi bạn xoá.</li>
+  <li><b>Khi bạn xoá tài khoản</b>, dữ liệu đám mây và bản ghi tài khoản bị xoá
+  ngay. Xem <a href="delete-account.html">trang xoá tài khoản</a>.</li>
+  <li>Bản sao lưu bạn tự tạo là <b>tệp của bạn</b>, nằm ở nơi bạn cất; nhà phát
+  triển không giữ bản nào.</li>
+</ul>
+
+<h2>7. Quyền của bạn</h2>
+<ul>
+  <li><b>Xem và mang đi</b>: Cài đặt → Sao lưu → <i>Sao lưu ra tệp</i> gói toàn
+  bộ kho thành một tệp <code>.zip</code> mở được bằng bất kỳ máy tính nào.</li>
+  <li><b>Sửa hoặc xoá</b> bất kỳ mục nào, bất kỳ lúc nào, ngay trong ứng dụng.</li>
+  <li><b>Xoá tài khoản và toàn bộ dữ liệu đám mây</b>: xem trang liên kết ở
+  trên.</li>
+  <li><b>Rút lại việc dùng AI</b>: xoá khoá API trong Cài đặt → Khoá API. Từ đó
+  không còn nội dung nào được gửi cho nhà cung cấp AI.</li>
+</ul>
+
+<h2>8. Trẻ em</h2>
+<p>Khomi không dành cho trẻ em dưới 13 tuổi và không cố ý thu thập dữ liệu của
+trẻ em.</p>
+
+<h2>9. Thay đổi chính sách</h2>
+<p>Khi chính sách này thay đổi, ngày cập nhật ở đầu trang sẽ đổi theo. Thay đổi
+đáng kể sẽ được thông báo trong ứng dụng.</p>
+
+<div class="lang" lang="en">
+  <h1>Privacy policy</h1>
+  <p class="updated">For the Khomi app (<code>com.mittohoa.khomi</code>) ·
+  Updated 26 August 2026</p>
+
+  <div class="note">
+    <p><b>The short version.</b> Khomi keeps everything <b>on your device</b>;
+    cloud sync is optional and <b>off by default</b>. When you turn it on, your
+    vault lives on the developer's Supabase project and <b>only your account can
+    read it</b>. AI features run only if you connect your own API key, and then
+    an item's content is sent to the provider you chose.</p>
+  </div>
+
+  <h2>1. Who runs this app</h2>
+  <p>Khomi is built and operated by <b>mittohoa</b>.
+  Contact: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a></p>
+
+  <h2>2. What is processed, and where</h2>
+  <h3>2.1 On your device only (the default)</h3>
+  <p>While you are signed out, <b>nothing leaves the device</b> except the
+  connections described in section 3. Saved items, the titles, covers, tags,
+  categories, summaries and semantic vectors the app derives from them, your
+  settings, and your AI key if you added one, all live in the app's own database
+  on the phone.</p>
+
+  <h3>2.2 When you turn on sync (optional)</h3>
+  <p>Sync requires an account made with an email address and a password. The
+  following is then sent to a Supabase project operated by the developer: your
+  email address; the content of saved items together with their titles, notes,
+  tags, categories, summaries and semantic vectors; and the created/updated
+  timestamps used to decide which copy is newer.</p>
+  <p><b>Images and attached files are not uploaded</b> — they stay on the device
+  that saved them.</p>
+  <p>The project is shared by all Khomi users, and accounts are isolated by the
+  database's Row Level Security policy: an account can only read and write rows
+  carrying its own user id. The developer, as project administrator, can
+  technically access the database.</p>
+
+  <h2>3. Outbound connections</h2>
+  <ul>
+    <li><b>Sites you saved</b> — right after you save a link, to read its title
+    and cover image. If you signed in to that site inside the app, that session
+    is used to read the page, and it is sent to that site only.</li>
+    <li><b>The AI provider you connected</b> (Google AI Studio, Groq, OpenAI,
+    OpenRouter, Mistral, Anthropic) — only if you added an API key. It receives
+    the content being summarised or classified, and the questions you type on
+    the Ask screen. The key is yours and stays on your device; your data is then
+    subject to that provider's own privacy policy.</li>
+    <li><b>Supabase</b> — only while you are signed in, as in 2.2.</li>
+  </ul>
+
+  <div class="note">
+    <p><b>No ads, no analytics, no behavioural tracking.</b> There is no
+    third-party SDK collecting your data. The app does not collect location,
+    contacts, or your list of installed apps.</p>
+  </div>
+
+  <h2>4. Processed on the device, sent nowhere</h2>
+  <p>Reading text in images (OCR) and scanning QR/barcodes both run entirely on
+  the device. Voice input uses the operating system's own speech recogniser and
+  is subject to your device maker's privacy policy.</p>
+
+  <h2>5. Permissions and why</h2>
+  <p>Camera — scanning QR codes. Microphone — voice input when you press the mic
+  button. Photos — saving images to your gallery and reading images you pick so
+  text can be recognised in them. Notifications — the reminders and digests you
+  switch on. Biometrics — the optional app lock. Run at startup — re-arming your
+  reminder schedule after a reboot. Internet — the connections in section 3.</p>
+
+  <h2>6. How long data is kept</h2>
+  <p>Items in the bin are deleted for good after <b>30 days</b>, on the device
+  and on the server. Everything else is kept until you delete it. Deleting your
+  account removes your cloud data and the account record immediately — see the
+  <a href="delete-account.html">account deletion page</a>. Backups you export are
+  your own files; the developer keeps no copy.</p>
+
+  <h2>7. Your rights</h2>
+  <p>Export everything as one <code>.zip</code> from Settings → Backup. Edit or
+  delete any item at any time. Delete your account and all cloud data from the
+  page linked above. Withdraw AI processing by removing your API key in
+  Settings → API keys, after which nothing further is sent to any AI provider.</p>
+
+  <h2>8. Children</h2>
+  <p>Khomi is not directed at children under 13 and does not knowingly collect
+  their data.</p>
+
+  <h2>9. Changes</h2>
+  <p>When this policy changes, the date at the top changes with it. Significant
+  changes will be announced in the app.</p>
+</div>
+
+<footer>
+  Khomi · <a href="delete-account.html">Xoá tài khoản / Delete your account</a>
+</footer>
+
+</div>
+</body>
+</html>

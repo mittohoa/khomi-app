@@ -1,0 +1,146 @@
+/* Khomi — shared styles for the public pages.
+   Kept in one file so the three pages cannot drift apart. */
+
+:root {
+  --paper:    #F7F5FC;
+  --surface:  #FFFFFF;
+  --ink:      #1A1630;
+  --ink-soft: #5A5378;
+  --line:     #E4E0F0;
+  --violet:   #5B4BD6;
+  --gold:     #B07C05;
+  --warn-bg:  #FDF3E3;
+  --warn-ink: #8A5A00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:    #0F0D1A;
+    --surface:  #181528;
+    --ink:      #EFECF8;
+    --ink-soft: #A9A1C6;
+    --line:     #2A2540;
+    --violet:   #A99BFF;
+    --gold:     #FFC94A;
+    --warn-bg:  #2A2010;
+    --warn-ink: #F5C97A;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 90px; }
+
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
+header svg { width: 40px; height: 40px; flex: none; }
+header b { font-size: 20px; letter-spacing: -.02em; }
+header a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
+header a:hover { color: var(--violet); }
+header .spacer { flex: 1; }
+
+h1 {
+  font-size: clamp(30px, 5vw, 40px);
+  line-height: 1.14;
+  letter-spacing: -.03em;
+  margin: 0 0 8px;
+}
+.updated { color: var(--ink-soft); font-size: 15px; margin: 0 0 30px; }
+
+h2 {
+  font-size: 21px;
+  letter-spacing: -.01em;
+  margin: 38px 0 10px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+h3 { font-size: 17px; margin: 22px 0 6px; }
+
+p, li { color: var(--ink); }
+p.soft, li.soft { color: var(--ink-soft); }
+a { color: var(--violet); }
+
+ul { padding-left: 22px; }
+li { margin-bottom: 7px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15.5px;
+  display: block;
+  overflow-x: auto;
+}
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th { color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
+
+.note {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--violet);
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+  margin: 22px 0;
+}
+.note.warn { border-left-color: var(--gold); background: var(--warn-bg); }
+.note.warn, .note.warn p { color: var(--warn-ink); }
+.note p { margin: 0; }
+.note p + p { margin-top: 8px; }
+
+.fill {
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+  border-radius: 5px;
+  padding: 1px 7px;
+  font-weight: 600;
+  font-size: .92em;
+}
+
+.steps { counter-reset: step; list-style: none; padding-left: 0; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 14px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 2px;
+  width: 27px; height: 27px;
+  border-radius: 50%;
+  background: var(--violet);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.lang {
+  margin-top: 60px;
+  padding-top: 26px;
+  border-top: 2px solid var(--line);
+}
+
+footer {
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
